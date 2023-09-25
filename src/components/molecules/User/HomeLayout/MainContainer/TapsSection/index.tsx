@@ -1,7 +1,7 @@
 "use client";
 import { Stack, Typography, Box, Tab, Tabs } from "@mui/material";
 import React, { useState } from "react";
-import { ITabPanelProps } from "@/@types/tab";
+import { ITabPanelProps } from "../../../../../../@types/tab";
 import JopDescription from "./JopDescription";
 import EmptySavedJobs from "./EmptySavedJobs";
 
@@ -14,7 +14,8 @@ function CustomTabPanel(props: ITabPanelProps) {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      {...other}>
+      {...other}
+    >
       {value === index && (
         <Box>
           <Typography>{children}</Typography>
@@ -42,13 +43,15 @@ const TabsSection = () => {
     <Stack
       direction="column"
       mt="1rem"
-      sx={{ border: "1px solid #ddd", borderRadius: "1rem" }}>
+      sx={{ border: "1px solid #ddd", borderRadius: "1rem" }}
+    >
       <Typography variant={"h3"} sx={{ fontSize: "1.3rem", padding: "1rem" }}>
         Jobs you might like
       </Typography>
       <Box sx={{ width: "100%" }}>
         <Box
-          sx={{ borderBottom: 1, borderColor: "divider", padding: "0 1rem" }}>
+          sx={{ borderBottom: 1, borderColor: "divider", padding: "0 1rem" }}
+        >
           <Tabs
             sx={{
               "& .css-1p9i4sw-MuiButtonBase-root-MuiTab-root.Mui-selected": {
@@ -60,7 +63,8 @@ const TabsSection = () => {
             }}
             value={value}
             onChange={handleChange}
-            aria-label="basic tabs example">
+            aria-label="basic tabs example"
+          >
             <Tab
               sx={{ textTransform: "capitalize" }}
               label="Best Matches"
@@ -87,8 +91,9 @@ const TabsSection = () => {
               fontWeight: 500,
               paddingBottom: "1rem",
               padding: "1rem 0 1rem 1rem",
-            }}>
-            Browse jobs that match your experience to a client's hiring
+            }}
+          >
+            Browse jobs that match your experience to a client&apos;s hiring
             preferences. Ordered by most relevant.
           </Typography>
           <JopDescription />
@@ -101,7 +106,8 @@ const TabsSection = () => {
               letterSpacing: ".6px",
               fontWeight: 500,
               padding: "1rem 0 1rem 1rem",
-            }}>
+            }}
+          >
             Browse the most recent jobs that match your skills and profile
             description to the skills clients are looking for.
           </Typography>
