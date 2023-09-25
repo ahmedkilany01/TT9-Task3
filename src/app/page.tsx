@@ -1,6 +1,6 @@
-import HomePage from "@/components/pages/HomePage";
-import Image from "next/image";
+import HomePage from "../components/pages/HomePage";
+import LoginPage from "../components/pages/LoginPage";
 
-export default function Home() {
-  return <></>;
+export default function page() {
+  return <LoginPage />;
 }
