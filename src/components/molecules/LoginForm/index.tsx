@@ -4,6 +4,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import "./style.css";
 import { FcGoogle } from "react-icons/fc";
 import AppleIcon from "@mui/icons-material/Apple";
+import Link from "next/link";
 
 const LoginForm = () => {
   return (
@@ -159,21 +160,23 @@ const LoginForm = () => {
           <Typography className="line" variant="body2" component={"div"}>
             Don&apos;t have an Upwork account?
           </Typography>
-          <Button
-            sx={{
-              width: "218px",
-              backgroundColor: "#fff",
-              color: "#108a00",
-              borderRadius: "2rem",
-              border: "1px solid #108a00",
-              padding: "0",
-              "&:hover": {
+          <Link href="/">
+            <Button
+              sx={{
+                width: "218px",
                 backgroundColor: "#fff",
-              },
-            }}
-          >
-            Sign Up
-          </Button>
+                color: "#108a00",
+                borderRadius: "2rem",
+                border: "1px solid #108a00",
+                padding: "0",
+                "&:hover": {
+                  backgroundColor: "#fff",
+                },
+              }}
+            >
+              Sign Up
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>
